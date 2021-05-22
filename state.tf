@@ -2,7 +2,7 @@
 resource "aws_s3_bucket" "tfstate_bucket" {
   bucket = "${var.tfstatebucket_name}"
   acl = "public-read"
-  policy = templatefile("templates/s3-policy.json")
+  policy = templatefile("templates/tfstate-policy.json")
 }
 
 resource "aws_s3_bucket_object" "folder1" {
